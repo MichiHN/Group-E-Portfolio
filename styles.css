@@ -1,0 +1,188 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: radial-gradient(circle at top left, #0d1117, #000000);
+    color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    background: #161b22;
+    border: 2px solid #30363d;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.15);
+    padding: 30px;
+    width: 420px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.25);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.profile-picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #58a6ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+.profile-picture button {
+    background: #21262d;
+    color: #58a6ff;
+    border: 2px solid #30363d;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    position: absolute;
+}
+
+.profile-picture #prev-btn {
+    left: -60px;
+}
+
+.profile-picture #next-btn {
+    right: -60px;
+}
+
+.profile-picture button:hover {
+    background: #58a6ff;
+    color: #0d1117;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+.profile-description {
+    color: #8b949e;
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.profile-form button {
+    background: linear-gradient(135deg, #58a6ff, #0dcaf0);
+    color: #0d1117;
+    font-weight: 700;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-form button:hover {
+    background: linear-gradient(135deg, #0dcaf0, #58a6ff);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #8b949e;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #58a6ff, #0dcaf0);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #58a6ff, #0dcaf0);
+    color: #0d1117;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0dcaf0, #58a6ff);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transform: translateY(-3px);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+    .profile-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .profile-picture #prev-btn {
+        left: -40px;
+    }
+
+    .profile-picture #next-btn {
+        right: -40px;
+    }
+}
